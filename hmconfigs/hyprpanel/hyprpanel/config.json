@@ -1,0 +1,153 @@
+{
+  "theme.bar.menus.enableShadow": false,
+  "bar.battery.label": true,
+  "bar.battery.hideLabelWhenFull": false,
+  "theme.bar.buttons.battery.enableBorder": false,
+  "bar.media.format": "{title}",
+  "bar.media.truncation": true,
+  "bar.media.show_label": true,
+  "bar.media.show_active_only": true,
+  "bar.notifications.show_total": true,
+  "theme.bar.buttons.notifications.enableBorder": false,
+  "bar.notifications.hideCountWhenZero": true,
+  "bar.launcher.icon": "󰣇 ",
+  "theme.font.name": "FiraCode Nerd Font Mono",
+  "theme.font.label": "FiraCode Nerd Font Mono Bold",
+  "theme.font.style": "normal",
+  "tear": false,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle",
+        "storage",
+        "ram",
+        "cpu",
+        "cputemp"
+      ],
+      "middle": [
+        "netstat"
+      ],
+      "right": [
+        "systray",
+        "volume",
+        "battery",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle",
+        "storage",
+        "ram",
+        "cpu",
+        "cputemp"
+      ],
+      "middle": [
+        "netstat"
+      ],
+      "right": [
+        "systray",
+        "volume",
+        "battery",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle",
+        "storage",
+        "ram",
+        "cpu",
+        "cputemp"
+      ],
+      "middle": [
+        "netstat"
+      ],
+      "right": [
+        "systray",
+        "volume",
+        "battery",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "bar.customModules.cava.icon": "",
+  "bar.customModules.cava.spaceCharacter": "",
+  "bar.customModules.cpuTemp.sensor": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
+  "menus.volume.raiseMaximumVolume": false,
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.show_numbered": true,
+  "bar.network.truncation": false,
+  "bar.network.showWifiInfo": true,
+  "theme.bar.buttons.network.enableBorder": false,
+  "bar.network.label": true,
+  "bar.volume.label": true,
+  "bar.volume.rightClick": "pavucontrol",
+  "theme.bar.buttons.systray.enableBorder": false,
+  "theme.bar.buttons.clock.enableBorder": false,
+  "bar.clock.showTime": true,
+  "theme.bar.buttons.clock.spacing": "0.8em",
+  "theme.bar.buttons.notifications.spacing": "0.5em",
+  "menus.media.hideAuthor": false,
+  "menus.media.hideAlbum": false,
+  "theme.osd.enable": true,
+  "theme.osd.orientation": "vertical",
+  "theme.osd.location": "right",
+  "theme.osd.muted_zero": false,
+  "menus.clock.time.military": false,
+  "menus.clock.weather.enabled": false,
+  "menus.dashboard.shortcuts.enabled": false,
+  "menus.dashboard.directories.enabled": false,
+  "menus.dashboard.powermenu.avatar.image": "/home/ext4/.dotfiles/hmconfigs/hyprpanel/nixoslogo.jpg",
+  "menus.power.lowBatteryNotification": true,
+  "menus.power.lowBatteryNotificationText": "Your battery is running low ($POWER_LEVEL %).\\n\\nPlease plug in your charger.",
+  "menus.power.lowBatteryNotificationTitle":  "Warning: Low battery",
+  "theme.bar.menus.menu.dashboard.profile.size": "8.5em",
+  "theme.bar.menus.menu.dashboard.profile.radius": "0.4em",
+  "bar.customModules.microphone.label": true,
+  "theme.bar.buttons.modules.microphone.enableBorder": false,
+  "theme.bar.floating": false,
+  "theme.bar.location": "top",
+  "bar.autoHide": "never",
+  "theme.bar.buttons.enableBorders": false,
+  "theme.bar.border.width": "0.15em",
+  "theme.bar.buttons.padding_x": "0.5rem",
+  "theme.bar.buttons.padding_y": "0rem",
+  "bar.launcher.autoDetectIcon": true,
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.numbered_active_indicator": "underline",
+  "bar.windowtitle.title_map": [],
+  "theme.bar.buttons.windowtitle.spacing": "0.8em",
+  "theme.bar.buttons.volume.enableBorder": false,
+  "theme.bar.buttons.modules.cava.enableBorder": false,
+  "theme.bar.buttons.modules.power.enableBorder": false,
+  "theme.osd.enableShadow": false,
+  "theme.bar.transparent": false,
+  "theme.bar.buttons.opacity": 100,
+  "theme.bar.buttons.background_opacity": 0,
+  "theme.bar.background": "#000000",
+  "theme.bar.menus.menu.notifications.background": "#000000",
+  "theme.bar.menus.menu.notifications.label": "#ffffff",
+  "theme.bar.menus.background": "#000000",
+  "theme.bar.menus.dropdownmenu.background": "#000000",
+  "theme.bar.menus.monochrome": false,
+  "wallpaper.pywal": false,
+  "theme.bar.border.location": "none",
+  "theme.bar.outer_spacing": "0em",
+  "theme.bar.buttons.separator.margins": "0.15em",
+  "notifications.autoDismiss": false,
+  "notifications.displayedTotal": 100,
+  "scalingPriority": "hyprland",
+  "theme.bar.buttons.y_margins": "0em",
+  "theme.bar.dropdownGap": "2.1em"
+}

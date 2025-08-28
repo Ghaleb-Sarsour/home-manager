@@ -1,0 +1,7 @@
+active,branch,cwd,file,filetype,project,time
+true,main,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core/init.lua,lua,nixdotfiles,2025-04-03 04:16:41
+true,main,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core/init.lua,lua,nixdotfiles,2025-04-03 04:17:09
+true,main,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core/keymaps.lua,lua,nixdotfiles,2025-04-03 04:17:57
+true,main,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core/keymaps.lua,lua,nixdotfiles,2025-04-03 04:18:37
+true,main,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core/options.lua,lua,nixdotfiles,2025-04-03 04:19:42
+true,main,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core,/home/ext4/.dotfiles/hmconfigs/neovim/uconfig/lua/core/options.lua,lua,nixdotfiles,2025-04-03 04:20:13

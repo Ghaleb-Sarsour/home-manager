@@ -1,0 +1,6 @@
+# Editor Completions
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Blank space between prompts
+add_newline = false
+

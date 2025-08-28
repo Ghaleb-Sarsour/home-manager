@@ -1,0 +1,5 @@
+{ config, pkgs, ... }:
+
+{
+    home.file.".config/tofi/config".source = ./config;
+}

@@ -1,0 +1,23 @@
+[manager]
+show_hidden = true
+
+[opener]
+play = [
+  { run = 'vlc "$@"', orphan = true }
+]
+open = [
+  { run = 'vimiv "$@"', orphan = true}
+]
+edit = [
+  { run = 'neovide "$@"', orphan = true}
+]
+
+[open]
+prepend_rules = [
+  { mime  = "video/*", use = "play" },
+  { mime = "image/*", use = "open" },
+  { mime = "text/*", use = "edit"}
+]
+append_rules = [
+  { name = "*", use = "open"}
+]
