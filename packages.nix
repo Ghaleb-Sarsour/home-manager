@@ -13,6 +13,7 @@
     neovide.enable = true;
     fastfetch.enable = true;
     hyprlock.enable = true;
+    hyprshot.enable = true;
   };
   services = {
     hyprpaper.enable = true;
