@@ -19,6 +19,8 @@
     ./hmconfigs/librewolf/librewolf.nix
     ./hmconfigs/icons/icons.nix
     ./hmconfigs/themes/themes.nix
+    ./hmconfigs/fonts/fonts.nix
+    ./hmconfigs/keyd/keyd.nix
   ];
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
