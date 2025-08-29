@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 let
   aliases = {
@@ -36,7 +36,8 @@ in
       bindkey "''${key[Down]}" history-substring-search-down
 
       # Run root
-      xhost si:localuser:root    
+      xhost si:localuser:root
+      . /home/ext4/.nix-profile/etc/profile.d/nix.sh    
     
     '';
 

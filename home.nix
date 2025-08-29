@@ -7,6 +7,7 @@
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
   imports  = [
+    ./packages.nix
     ./hmconfigs/shell/sh.nix
     ./hmconfigs/neovim/neovim.nix
     ./hmconfigs/hyprland/hyprland.nix
