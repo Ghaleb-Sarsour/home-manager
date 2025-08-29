@@ -10,6 +10,10 @@ let
 
 in
 {
+  home.sessionPath = [
+    "/home/ext4/.cargo/bin"
+    "/home/ext4/.local/bin"
+  ];
   programs.zsh = {
     enable = true;
     shellAliases = aliases;
@@ -28,9 +32,6 @@ in
       # Run root
       xhost si:localuser:root
       . /home/ext4/.nix-profile/etc/profile.d/nix.sh    
-      export PATH=$PATH:/home/ext4/.cargo/bin
-      export PATH=$PATH:/home/ext4/.local/bin
-    
     '';
 
     plugins = [

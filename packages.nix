@@ -15,8 +15,5 @@
     hyprlock.enable = true;
     hyprshot.enable = true;
     vesktop.enable = true;
-  };
-  services = {
-    hyprpaper.enable = true;
-  };
+ };
 }
