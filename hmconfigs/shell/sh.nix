@@ -28,7 +28,8 @@ in
       # Run root
       xhost si:localuser:root
       . /home/ext4/.nix-profile/etc/profile.d/nix.sh    
-      /home/ext4/.cargo/bin
+      export PATH=$PATH:/home/ext4/.cargo/bin
+      export PATH=$PATH:/home/ext4/.local/bin
     
     '';
 
