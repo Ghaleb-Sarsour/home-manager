@@ -3,6 +3,7 @@ sudo dnf copr enable solopasha/hyprland
 sudo dnf copr enable heus-sueh/packages
 sudo dnf copr enable alternateved/keyd
 ./dnf.sh
+sudo systemctl enable tlp.service
 curl -L https://nixos.org/nix/install | sh
 . /home/ext4/nix-profile/etc/profile.d/nix.sh
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager

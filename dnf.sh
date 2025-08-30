@@ -13,3 +13,5 @@ sudo dnf install cpupower
 sudo dnf install alsa-utils alsa-firmware alsa-sof-firmware
 pipx install hyprshade
 cargo install tree-sitter-cli --locked
+sudo dnf remove power-profiles-daemon
+sudo dnf install tlp
