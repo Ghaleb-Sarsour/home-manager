@@ -12,8 +12,6 @@
     starship.enable = true;
     neovide.enable = true;
     fastfetch.enable = true;
-    hyprlock.enable = true;
     hyprshot.enable = true;
-    vesktop.enable = true;
  };
 }
