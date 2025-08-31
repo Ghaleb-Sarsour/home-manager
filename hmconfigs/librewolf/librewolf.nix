@@ -3,9 +3,9 @@
 {
   programs.librewolf = {
     settings = {
-      "webgl.disabled" = true;
+      "webgl.disabled" = false;
       "privacy.resistFingerprinting" = true;
-      "privacy.resistFingerprinting.letterboxing" = true;
+      "privacy.resistFingerprinting.letterboxing" = false;
       "privacy.clearOnShutdown.history" = false;
       "privacy.clearOnShutdown.cookies" = false;
       "identity.fxaccounts.enabled" = true;

@@ -1,3 +1,5 @@
+sudo xfs_growfs /dev/mapper/fedora-root
+sudo lvextend --extents +100%FREE /dev/mapper/fedora-root
 sudo dnf update
 sudo dnf copr enable solopasha/hyprland
 sudo dnf copr enable heus-sueh/packages
