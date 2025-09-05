@@ -13,5 +13,6 @@
     neovide.enable = true;
     fastfetch.enable = true;
     hyprshot.enable = true;
+    qutebrowser.enable = true;
  };
 }
