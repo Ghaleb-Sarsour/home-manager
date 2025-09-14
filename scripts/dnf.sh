@@ -14,9 +14,10 @@ sudo dnf install cpupower
 sudo dnf install ncdu
 sudo dnf install kde-connect
 sudo dnf install java
-sudo dnf install discord
+sudo dnf install discord obs shotcut
 sudo dnf install alsa-utils alsa-firmware alsa-sof-firmware
 sudo dnf install onlyoffice-desktopeditors
+sudo dnf install displaylink -y
 pipx install hyprshade
 cargo install tree-sitter-cli --locked
 sudo dnf remove power-profiles-daemon

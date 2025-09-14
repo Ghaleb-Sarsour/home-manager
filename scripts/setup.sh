@@ -4,6 +4,7 @@ sudo dnf update
 sudo dnf copr enable solopasha/hyprland
 sudo dnf copr enable heus-sueh/packages
 sudo dnf copr enable alternateved/keyd
+sudo dnf copr enable crashdummy/DisplayLink
 sudo dnf install https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ./dnf.sh
