@@ -1,13 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  aliases = {
-    nix-clean = "sudo nix-collect-garbage -d && sudo nix-store --optimise -v && ncdu";
-    usb-connect = "sudo systemctl restart usbguard.service";
-    low-power = "sudo tlp bat";
-    high-power = "sudo tlp ac";
-  };
-
+  aliases = {};
 in
 {
   home.sessionPath = [
@@ -17,7 +11,7 @@ in
   programs.zsh = {
     enable = true;
     shellAliases = aliases;
-    initExtra = ''
+    initContent = ''
       #make nvim default editor
       export EDITOR=nvim
 
@@ -26,8 +20,8 @@ in
       eval "$(fzf --zsh)" 
 
       # History Keybinds
-      bindkey "''${key[Up]}" history-substring-search-up
-      bindkey "''${key[Down]}" history-substring-search-down
+      bindkey '^[[A' history-substring-search-up
+      bindkey '^[[B' history-substring-search-down
 
       # Run root
       xhost si:localuser:root

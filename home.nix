@@ -11,7 +11,6 @@
     ./hmconfigs/shell/sh.nix
     ./hmconfigs/neovim/neovim.nix
     ./hmconfigs/hyprland/hyprland.nix
-    ./hmconfigs/wezterm/wezterm.nix
     ./hmconfigs/starship/starship.nix
     ./hmconfigs/yazi/yazi.nix
     ./hmconfigs/hyprpanel/hyprpanel.nix
@@ -51,9 +50,7 @@
   #
   #  /etc/profiles/per-user/ext4/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
+  home.sessionVariables = {};
 
   programs.home-manager.enable = true;
 }
