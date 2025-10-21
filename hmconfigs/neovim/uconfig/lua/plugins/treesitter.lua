@@ -42,6 +42,7 @@ return {
         "rust",
         "latex",
         "c",
+        "cmake",
         "java",
         "python",
       },
