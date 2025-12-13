@@ -7,6 +7,7 @@ in
   home.sessionPath = [
     "/home/ext4/.cargo/bin"
     "/home/ext4/.local/bin"
+    "/home/ext4/.local/share/bob/nightly/bin"
   ];
   programs.zsh = {
     enable = true;

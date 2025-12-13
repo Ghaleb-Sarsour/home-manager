@@ -10,6 +10,7 @@
     ./packages.nix
     ./hmconfigs/shell/sh.nix
     ./hmconfigs/neovim/neovim.nix
+		./hmconfigs/tmux/tmux.nix
     ./hmconfigs/hyprland/hyprland.nix
     ./hmconfigs/starship/starship.nix
     ./hmconfigs/yazi/yazi.nix

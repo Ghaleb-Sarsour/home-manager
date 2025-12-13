@@ -3,7 +3,6 @@
 {
   programs = {
     wezterm.enable = true;
-    neovim.enable = true;
     librewolf.enable = true;
     yazi.enable = true;
     tofi.enable = true;
