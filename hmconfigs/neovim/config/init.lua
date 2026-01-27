@@ -17,9 +17,10 @@ vim.o.winborder = 'rounded'
 vim.o.signcolumn = 'yes'
 vim.o.termguicolors = true
 
+
 --Folding:
 vim.defer_fn(function()
-  vim.api.nvim_set_hl(0, "Folded", { fg = "white", bg = "darkblue" })
+	vim.api.nvim_set_hl(0, "Folded", { fg = "white", bg = "darkblue" })
 end, 50)
 vim.o.foldenable = true
 vim.o.foldlevel = 99
@@ -48,12 +49,12 @@ local set_highlights = function()
 	vim.api.nvim_set_hl(0, 'RenderMarkdownUnchecked', {
 		fg = '#FFFFFF', ctermfg = 'White', bold = false
 	})
-	
+
 	-- Checked items (green text and icon)
 	vim.api.nvim_set_hl(0, 'RenderMarkdownChecked', {
 		fg = '#AEF0A3', ctermfg = 'Green', bold = false
 	})
-	
+
 	-- Custom status highlights
 	vim.api.nvim_set_hl(0, 'RenderMarkdownImportant', {
 		fg = '#F5011A', ctermfg = 'Red', bold = false
@@ -66,14 +67,17 @@ local set_highlights = function()
 	})
 end
 
+
 -- Apply highlights immediately
 set_highlights()
+
 
 -- Re-apply when colorscheme changes
 vim.api.nvim_create_autocmd("ColorScheme", {
 	pattern = "*",
 	callback = set_highlights
 })
+
 
 -- Listchars
 vim.o.list = true
@@ -84,22 +88,6 @@ vim.opt.listchars = {
 	extends = ">", -- when line continues off screen
 	precedes = "<", -- when line continues to the left
 }
-
-
--- Keymaps
-vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
-vim.keymap.set({ 'v', 'x' }, 'y', '"+y<CR>')
-vim.keymap.set('n', '<leader>y', '"+y<CR>')
-vim.keymap.set({ 'v', 'x' }, 'd', '"+d<CR>')
-vim.keymap.set('n', '<leader>d', '"+d<CR>')
-vim.keymap.set('n', '<leader>mm', vim.lsp.buf.format)                              --LSP
-vim.keymap.set('n', '<leader>e', ':Oil<CR>')                                       -- Oil
-vim.keymap.set({ 'n', 'v' }, '<leader>-', ':Yazi<CR>')                             --Yazi
-vim.keymap.set({ 'n', 'v' }, '<leader>ff', function() Snacks.picker.smart() end)   --Snacks Picker
-vim.keymap.set({ 'n', 'v' }, '<leader>fb', function() Snacks.picker.buffers() end) --Snacks Picker
-vim.keymap.set({ 'n', 'v' }, '<leader>fg', function() Snacks.picker.grep() end)    --Snacks Picker
-vim.keymap.set({ 'n', 'v' }, '<leader>fr', function() Snacks.picker.recent() end)  --Snacks Picker
-vim.keymap.set({ 'n', 'v' }, '<leader>fh', function() Snacks.picker.undo() end)    --Snacks Picker
 
 
 -- Plugins
@@ -117,14 +105,24 @@ vim.pack.add({
 	{ src = "https://github.com/folke/snacks.nvim" },
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
 	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
+	{ src = "https://github.com/nosduco/remote-sshfs.nvim" },
+	{ src = "https://github.com/nvim-telescope/telescope.nvim" },
 })
 
+require("telescope").load_extension 'remote-sshfs'
+require('remote-sshfs').setup()
 require("oil").setup()
 require("autoclose").setup()
 require("mason").setup()
 require("yazi").setup()
 require("blink.cmp").setup {
-	fuzzy = { implementation = "lua" }
+	fuzzy = { implementation = "lua" },
+	keymap = {
+		preset = 'default',
+		['<Down>'] = {},
+		['<Up>'] = {},
+	},
+
 }
 require("mason-lspconfig").setup {
 	automatic_enable = true,
@@ -134,8 +132,12 @@ require("mason-lspconfig").setup {
 		"lua_ls",
 		"asm_lsp",
 		"clangd",
-		"pylyzer",
+		"basedpyright",
+		"verible",
 		"nil_ls",
+		"djlsp",
+		"html",
+		"cssls",
 	}
 }
 require("snacks").setup {
@@ -192,6 +194,26 @@ require('render-markdown').setup {
 	},
 }
 
+-- Keymaps
+vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
+vim.keymap.set({ 'v', 'x' }, 'y', '"+y<CR>')
+vim.keymap.set('n', '<leader>y', '"+y<CR>')
+vim.keymap.set({ 'v', 'x' }, 'd', '"+d<CR>')
+vim.keymap.set('n', '<leader>d', '"+d<CR>')
+vim.keymap.set('n', '<leader>mm', vim.lsp.buf.format)                              --LSP
+vim.keymap.set('n', '<leader>e', ':Oil<CR>')                                       -- Oil
+vim.keymap.set({ 'n', 'v' }, '<leader>-', ':Yazi<CR>')                             --Yazi
+vim.keymap.set({ 'n', 'v' }, '<leader>fs', function() Snacks.picker.smart() end)   --Snacks Picker
+vim.keymap.set({ 'n', 'v' }, '<leader>ff', function() Snacks.picker.files() end)   --Snacks Picker
+vim.keymap.set({ 'n', 'v' }, '<leader>fb', function() Snacks.picker.buffers() end) --Snacks Picker
+vim.keymap.set({ 'n', 'v' }, '<leader>fg', function() Snacks.picker.grep() end)    --Snacks Picker
+vim.keymap.set({ 'n', 'v' }, '<leader>fr', function() Snacks.picker.recent() end)  --Snacks Picker
+vim.keymap.set({ 'n', 'v' }, '<leader>fh', function() Snacks.picker.undo() end)    --Snacks Picker
+local api = require('remote-sshfs.api')                                            --SSHFS
+vim.keymap.set('n', '<leader>rc', api.connect, {})                                 --SSHFS
+vim.keymap.set('n', '<leader>rd', api.disconnect, {})                              --SSHFS
+vim.keymap.set('n', '<leader>re', api.edit, {})                                    --SSHFS
+
 -- Colorscheme
 vim.cmd("colorscheme moonfly")
 vim.cmd(":hi statusline guibg=NONE")
@@ -201,14 +223,15 @@ vim.cmd(":hi statusline guibg=NONE")
 vim.diagnostic.config({
 	virtual_text = {
 		severity = {
-			max = vim.diagnostic.severity.WARN,
+			min = vim.diagnostic.severity.WARN,
+			max = vim.diagnostic.severity.ERROR,
 		},
 	},
-	virtual_lines = {
-		severity = {
-			min = vim.diagnostic.severity.ERROR,
-		},
-	},
+	-- virtual_lines = {
+	-- 	severity = {
+	-- 		min = vim.diagnostic.severity.ERROR,
+	-- 	},
+	-- },
 })
 
 
