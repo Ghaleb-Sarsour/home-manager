@@ -107,6 +107,7 @@ vim.pack.add({
 	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
 	{ src = "https://github.com/nosduco/remote-sshfs.nvim" },
 	{ src = "https://github.com/nvim-telescope/telescope.nvim" },
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 })
 
 require("telescope").load_extension 'remote-sshfs'
@@ -115,6 +116,20 @@ require("oil").setup()
 require("autoclose").setup()
 require("mason").setup()
 require("yazi").setup()
+require("nvim-treesitter").setup()
+require("nvim-treesitter").install {
+	'asm',
+	'c',
+	'css',
+	'html',
+	'java',
+	'json',
+	'lua',
+	'markdown',
+	'nix',
+	'python',
+	'rust',
+}
 require("blink.cmp").setup {
 	fuzzy = { implementation = "lua" },
 	keymap = {
@@ -209,10 +224,14 @@ vim.keymap.set({ 'n', 'v' }, '<leader>fb', function() Snacks.picker.buffers() en
 vim.keymap.set({ 'n', 'v' }, '<leader>fg', function() Snacks.picker.grep() end)    --Snacks Picker
 vim.keymap.set({ 'n', 'v' }, '<leader>fr', function() Snacks.picker.recent() end)  --Snacks Picker
 vim.keymap.set({ 'n', 'v' }, '<leader>fh', function() Snacks.picker.undo() end)    --Snacks Picker
-local api = require('remote-sshfs.api')                                            --SSHFS
-vim.keymap.set('n', '<leader>rc', api.connect, {})                                 --SSHFS
-vim.keymap.set('n', '<leader>rd', api.disconnect, {})                              --SSHFS
-vim.keymap.set('n', '<leader>re', api.edit, {})                                    --SSHFS
+
+
+-- Treesitter
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = { '<filetype>' },
+	callback = function() vim.treesitter.start() end,
+})
+
 
 -- Colorscheme
 vim.cmd("colorscheme moonfly")
