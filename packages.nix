@@ -13,4 +13,7 @@
     hyprshot.enable = true;
     qutebrowser.enable = true;
  };
+	home.packages = with pkgs; [
+		discordo
+	]; 
 }
