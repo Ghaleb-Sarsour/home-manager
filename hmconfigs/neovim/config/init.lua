@@ -9,6 +9,8 @@ vim.o.tabstop = 2
 
 
 -- Other
+vim.o.spell = true
+vim.o.spelllang = "en_us"
 vim.o.smoothscroll = true
 vim.o.wrap = false
 vim.o.swapfile = false
