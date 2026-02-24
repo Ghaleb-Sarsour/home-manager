@@ -114,6 +114,7 @@ vim.pack.add({
 	{ src = "https://github.com/kawre/leetcode.nvim" },
 	{ src = "https://github.com/MunifTanjim/nui.nvim" },
 	{ src = "https://github.com/vyfor/cord.nvim" },
+	{ src = "https://github.com/seblyng/roslyn.nvim" },
 })
 
 require('leetcode').setup()
@@ -122,12 +123,12 @@ require("telescope").load_extension 'remote-sshfs'
 require('remote-sshfs').setup()
 require("oil").setup()
 require("autoclose").setup()
-require("mason").setup()
 require("yazi").setup()
 require("nvim-treesitter").setup()
 require("nvim-treesitter").install {
 	'asm',
 	'c',
+	'c_sharp',
 	'css',
 	'html',
 	'java',
@@ -146,7 +147,12 @@ require("blink.cmp").setup {
 		['<Down>'] = {},
 		['<Up>'] = {},
 	},
-
+}
+require("mason").setup {
+	registries = {
+		"github:Crashdummyy/mason-registry",
+		"github:mason-org/mason-registry",
+	},
 }
 require("mason-lspconfig").setup {
 	automatic_enable = true,
@@ -273,3 +279,19 @@ vim.lsp.config("lua_ls", {
 		}
 	}
 })
+
+local roslyn_loaded = false
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'cs',
+  callback = function()
+    if not roslyn_loaded then
+      -- Ensure the plugin is loaded
+      vim.cmd('packadd roslyn.nvim')
+      require('roslyn').setup({
+        filewatching = "roslyn",
+      })
+      roslyn_loaded = true
+    end
+  end,
+})
+
