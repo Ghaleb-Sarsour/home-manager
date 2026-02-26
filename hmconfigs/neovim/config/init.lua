@@ -282,16 +282,15 @@ vim.lsp.config("lua_ls", {
 
 local roslyn_loaded = false
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'cs',
-  callback = function()
-    if not roslyn_loaded then
-      -- Ensure the plugin is loaded
-      vim.cmd('packadd roslyn.nvim')
-      require('roslyn').setup({
-        filewatching = "roslyn",
-      })
-      roslyn_loaded = true
-    end
-  end,
+	pattern = 'cs',
+	callback = function()
+		if not roslyn_loaded then
+			-- Ensure the plugin is loaded
+			vim.cmd('packadd roslyn.nvim')
+			require('roslyn').setup({
+				filewatching = "roslyn",
+			})
+			roslyn_loaded = true
+		end
+	end,
 })
-
