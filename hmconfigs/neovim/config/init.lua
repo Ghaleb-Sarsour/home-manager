@@ -115,6 +115,7 @@ vim.pack.add({
 	{ src = "https://github.com/MunifTanjim/nui.nvim" },
 	{ src = "https://github.com/vyfor/cord.nvim" },
 	{ src = "https://github.com/seblyng/roslyn.nvim" },
+	{ src = "https://github.com/stevearc/conform.nvim" },
 })
 
 require('leetcode').setup()
@@ -170,6 +171,11 @@ require("mason-lspconfig").setup {
 		"cssls",
 	}
 }
+require('conform').setup({
+	formatters_by_ft = {
+		html = { "superhtml" },
+	}
+})
 require("snacks").setup {
 	opts = {
 		notifier = { enabled = true },
@@ -230,7 +236,6 @@ vim.keymap.set({ 'v', 'x' }, 'y', '"+y<CR>')
 vim.keymap.set('n', '<leader>y', '"+y<CR>')
 vim.keymap.set({ 'v', 'x' }, 'd', '"+d<CR>')
 vim.keymap.set('n', '<leader>d', '"+d<CR>')
-vim.keymap.set('n', '<leader>mm', vim.lsp.buf.format)                              --LSP
 vim.keymap.set('n', '<leader>e', ':Oil<CR>')                                       -- Oil
 vim.keymap.set({ 'n', 'v' }, '<leader>-', ':Yazi<CR>')                             --Yazi
 vim.keymap.set({ 'n', 'v' }, '<leader>fs', function() Snacks.picker.smart() end)   --Snacks Picker
@@ -239,6 +244,10 @@ vim.keymap.set({ 'n', 'v' }, '<leader>fb', function() Snacks.picker.buffers() en
 vim.keymap.set({ 'n', 'v' }, '<leader>fg', function() Snacks.picker.grep() end)    --Snacks Picker
 vim.keymap.set({ 'n', 'v' }, '<leader>fr', function() Snacks.picker.recent() end)  --Snacks Picker
 vim.keymap.set({ 'n', 'v' }, '<leader>fh', function() Snacks.picker.undo() end)    --Snacks Picker
+vim.keymap.set('n', '<leader>mm', function()                                       -- Formatting Conform.nvim
+	require("conform").format({ async = true, lsp_fallback = true })
+end)
+
 
 
 -- Treesitter
@@ -268,6 +277,13 @@ vim.cmd(":hi statusline guibg=NONE")
 -- },
 -- })
 
+-- Formatter
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*",
+	callback = function(args)
+
+	end,
+})
 
 -- Lsp
 vim.lsp.config("lua_ls", {
