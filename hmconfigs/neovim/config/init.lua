@@ -100,6 +100,7 @@ vim.pack.add({
 	{ src = "https://github.com/mason-org/mason.nvim" },
 	{ src = "https://github.com/mason-org/mason-lspconfig.nvim" },
 	{ src = "https://github.com/rafamadriz/friendly-snippets" },
+	{ src = "https://github.com/Saghen/blink.lib"},
 	{ src = "https://github.com/Saghen/blink.cmp" },
 	{ src = "https://github.com/m4xshen/autoclose.nvim" },
 	{ src = "https://github.com/mikavilpas/yazi.nvim" },

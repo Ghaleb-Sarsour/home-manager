@@ -7,16 +7,15 @@
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
   imports  = [
-    ./packages.nix
     ./hmconfigs/shell/sh.nix
     ./hmconfigs/neovim/neovim.nix
-		./hmconfigs/tmux/tmux.nix
-    ./hmconfigs/hyprland/hyprland.nix
+    ./hmconfigs/tmux/tmux.nix
     ./hmconfigs/starship/starship.nix
     ./hmconfigs/yazi/yazi.nix
-    ./hmconfigs/hyprpanel/hyprpanel.nix
-    ./hmconfigs/tofi/tofi.nix
-    ./hmconfigs/librewolf/librewolf.nix
+    # ./hmconfigs/hyprpanel/hyprpanel.nix
+    # ./hmconfigs/tofi/tofi.nix
+    # ./hmconfigs/librewolf/librewolf.nix
+    # ./hmconfigs/hyprland/hyprland.nix
     ./hmconfigs/icons/icons.nix
     ./hmconfigs/themes/themes.nix
     ./hmconfigs/fonts/fonts.nix

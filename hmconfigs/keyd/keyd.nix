@@ -1,5 +1,5 @@
 { config, pkgs, ...}:
 
 {
-  home.file."/etc/keyd/".source = ./keyd;
+  home.file.".config/keyd/".source = ./keyd;
 }
