@@ -18,6 +18,6 @@ prepend_rules = [
   { mime = "image/*", use = "open" },
   { mime = "text/*", use = "edit"}
 ]
-append_rules = [
-  { name = "*", use = "open"}
-]
+# append_rules = [
+#   { name = "*", use = "open"}
+# ]

@@ -8,7 +8,6 @@ in
     "/home/ext4/.cargo/bin"
     "/home/ext4/.local/bin"
     "/home/ext4/.local/share/bob/nightly/bin"
-		"/home/ext4/.config/home-manager/hmconfigs/shell/programs/"
   ];
   programs.zsh = {
     enable = true;
@@ -27,7 +26,6 @@ in
 
       # Run root
       xhost si:localuser:root
-      . /home/ext4/.nix-profile/etc/profile.d/nix.sh    
     '';
 
     plugins = [

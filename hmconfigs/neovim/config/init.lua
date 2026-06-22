@@ -162,7 +162,6 @@ require("mason-lspconfig").setup {
 		"rust_analyzer",
 		"jdtls",
 		"lua_ls",
-		"asm_lsp",
 		"clangd",
 		"basedpyright",
 		"verible",
