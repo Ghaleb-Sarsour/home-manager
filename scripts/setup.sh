@@ -11,10 +11,10 @@
 #exec hash dbus-update-activation-environment 2>/dev/null && \
 #dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
 
-#echo "XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR"
-#echo "WAYLAND_DISPLAY=$WAYLAND_DISPLAY"
-#echo "XDG_CURRENT_DESKTOP=$XDG_CURRENT_DESKTOP"
-#echo "XDG_SESSION_TYPE=$XDG_SESSION_TYPE"
+# echo "XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR"
+# echo "WAYLAND_DISPLAY=$WAYLAND_DISPLAY"
+# echo "XDG_CURRENT_DESKTOP=$XDG_CURRENT_DESKTOP"
+# echo "XDG_SESSION_TYPE=$XDG_SESSION_TYPE"
 
 #systemctl --user edit xdg-desktop-portal.service
 # [Service]
@@ -40,6 +40,11 @@
 # Regenerate your grub.
 # sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
+
+
+# FOR keyring
+# When using console-based login (ie, not using a Display Manager), edit /etc/pam.d/login:
+# Add auth optional pam_gnome_keyring.so at the end of the auth section and session optional pam_gnome_keyring.so auto_start at the end of the session section.
 
 ## Update Packages
 sudo dnf update

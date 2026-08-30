@@ -7,6 +7,10 @@
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
   imports  = [
+		./hmconfigs/rofi/rofi.nix
+		./hmconfigs/kanshi/kanshi.nix
+		./hmconfigs/sway/sway.nix
+		./hmconfigs/kitty/kitty.nix
     ./hmconfigs/shell/sh.nix
     ./hmconfigs/starship/starship.nix
 		./hmconfigs/kitty/kitty.nix

@@ -1,3 +1,4 @@
+
 # vim:fileencoding=utf-8:foldmethod=marker
 # : Manager {{{
 
@@ -181,16 +182,16 @@ rules = [
 	{ mime = "inode/x-empty", fg = "#ff5454" },
 
 	# Special files
-	{ name = "*", is = "orphan", bg = "#ff5189" },
-	{ name = "*", is = "exec"  , fg = "#36c692" },
-
-	# Dummy files
-	{ name = "*", is = "dummy", bg = "#ff5189" },
-	{ name = "*/", is = "dummy", bg = "#ff5189" },
-
-	# Fallback
-	{ name = "*", fg = "#e4e4e4" },
-	{ name = "*/", fg = "#80a0ff" }
+	# { name = "*", is = "orphan", bg = "#ff5189" },
+	# { name = "*", is = "exec"  , fg = "#36c692" },
+	#
+	# # Dummy files
+	# { name = "*", is = "dummy", bg = "#ff5189" },
+	# { name = "*/", is = "dummy", bg = "#ff5189" },
+	#
+	# # Fallback
+	# { name = "*", fg = "#e4e4e4" },
+	# { name = "*/", fg = "#80a0ff" }
 ]
 
 [icon]

@@ -1,0 +1,10 @@
+# Profile when external monitor is connected - disables laptop display
+profile {
+    output HDMI-A-1 enable
+    output eDP-1 disable
+}
+
+# Profile when only laptop display is connected
+profile {
+    output eDP-1 enable
+}

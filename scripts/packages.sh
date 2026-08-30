@@ -1,7 +1,10 @@
 ## DNF Packages to install
-sudo dnf install fastfetch neovim sway kitty librewolf chromium openssl xhost nix zsh keyd cpupower onlyoffice-desktopeditors btop nextcloud obs steam tmux yazi starship discord blueman waybar flatpak docker
+sudo dnf install fastfetch neovim sway kitty librewolf chromium openssl xhost nix zsh keyd cpupower onlyoffice-desktopeditors btop nextcloud-client obs steam tmux yazi starship discord blueman waybar flatpak docker rofi-wayland vlc ncdu gnome-tweaks kanshi vimiv
+
 
 sudo dnf install mscore-fonts-all lm_sensors
+
+sudo dnf install seahorse gnome-keyring
 
 ## cpupower stuff
 sudo dnf install acpi acpid acpitool kernel-tools

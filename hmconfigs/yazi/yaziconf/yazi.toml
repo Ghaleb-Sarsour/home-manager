@@ -9,15 +9,12 @@ open = [
   { run = 'vimiv "$@"', orphan = true}
 ]
 edit = [
-  { run = 'neovide "$@"', orphan = true}
+  { run = 'neovim "$@"', orphan = true}
 ]
 
 [open]
 prepend_rules = [
   { mime  = "video/*", use = "play" },
   { mime = "image/*", use = "open" },
-  { mime = "text/*", use = "edit"}
+  { mime = "text/*", use = "edit"},
 ]
-# append_rules = [
-#   { name = "*", use = "open"}
-# ]

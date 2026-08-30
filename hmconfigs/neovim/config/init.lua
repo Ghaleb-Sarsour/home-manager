@@ -100,7 +100,7 @@ vim.pack.add({
 	{ src = "https://github.com/mason-org/mason.nvim" },
 	{ src = "https://github.com/mason-org/mason-lspconfig.nvim" },
 	{ src = "https://github.com/rafamadriz/friendly-snippets" },
-	{ src = "https://github.com/Saghen/blink.lib"},
+	{ src = "https://github.com/Saghen/blink.lib" },
 	{ src = "https://github.com/Saghen/blink.cmp" },
 	{ src = "https://github.com/m4xshen/autoclose.nvim" },
 	{ src = "https://github.com/mikavilpas/yazi.nvim" },
@@ -117,6 +117,7 @@ vim.pack.add({
 	{ src = "https://github.com/vyfor/cord.nvim" },
 	{ src = "https://github.com/seblyng/roslyn.nvim" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
+	{ src = "https://github.com/chomosuke/typst-preview.nvim" },
 })
 
 require('leetcode').setup()
@@ -127,6 +128,9 @@ require("oil").setup()
 require("autoclose").setup()
 require("yazi").setup()
 require("nvim-treesitter").setup()
+require('typst-preview').setup {
+	invert_colors = 'always'
+}
 require("nvim-treesitter").install {
 	'asm',
 	'c',
@@ -140,6 +144,7 @@ require("nvim-treesitter").install {
 	'nix',
 	'python',
 	'rust',
+	'typst',
 }
 require('cord').setup {}
 require("blink.cmp").setup {
@@ -169,6 +174,7 @@ require("mason-lspconfig").setup {
 		"djlsp",
 		"html",
 		"cssls",
+		"tinymist",
 	}
 }
 require('conform').setup({
@@ -310,3 +316,14 @@ vim.api.nvim_create_autocmd('FileType', {
 		end
 	end,
 })
+
+-- Completely Black background
+vim.o.background = "dark"
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "#000000" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "#000000" })
+
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "#000000" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000", fg = "#ffffff" })
+vim.api.nvim_set_hl(0, "VertSplit", { bg = "#000000", fg = "#000000" })

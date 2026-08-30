@@ -1,0 +1,24 @@
+color=000000
+font=FiraCode Nerd Font Mono
+text-color=FFD700
+text-wrong-color=FF0000
+text-ver-color=FFD700
+indicator-radius=100
+indicator-thickness=10
+inside-color=000000
+inside-clear-color=000000
+inside-ver-color=000000
+inside-wrong-color=000000
+ring-color=FFD700
+ring-clear-color=FFD700
+ring-ver-color=FFD700
+ring-wrong-color=FFD700
+line-color=00000000
+line-clear-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+separator-color=00000000
+key-hl-color=000000
+bs-hl-color=000000
+show-failed-attempts
+font-size=24

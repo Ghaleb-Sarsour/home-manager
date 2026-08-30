@@ -1,0 +1,3 @@
+timeout 300 "systemctl sleep"
+before-sleep "swaylock"
+after-resume "swaymsg 'output * dpms on'"
